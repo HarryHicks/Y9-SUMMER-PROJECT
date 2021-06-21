@@ -8,6 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 zxcvbn = "^4.4.28"
 flask = "^2.0.1"
+english-words = "^1.0.3"
 
 [tool.poetry.dev-dependencies]
 

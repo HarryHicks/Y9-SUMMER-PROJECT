@@ -20,6 +20,14 @@ version = "0.4.4"
 
 [[package]]
 category = "main"
+description = "Contains sets of English words"
+name = "english-words"
+optional = false
+python-versions = "*"
+version = "1.0.3"
+
+[[package]]
+category = "main"
 description = "A simple framework for building complex web applications."
 name = "flask"
 optional = false
@@ -86,7 +94,7 @@ python-versions = "*"
 version = "4.4.28"
 
 [metadata]
-content-hash = "78103aec9f1a578227482215922ef614202af320702e10c874f9a8afddcbaae4"
+content-hash = "919c0a132d29e08b681006d2616ec0bd74f78cb1aedeed0808b1ddf056013c6c"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -97,6 +105,9 @@ click = [
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+]
+english-words = [
+    {file = "english-words-1.0.3.tar.gz", hash = "sha256:e936ba237455e16a89b877660c0e160852e54de682ad553d79083dbb7b10b345"},
 ]
 flask = [
     {file = "Flask-2.0.1-py3-none-any.whl", hash = "sha256:a6209ca15eb63fc9385f38e452704113d679511d9574d09b2cf9183ae7d20dc9"},

@@ -23,8 +23,9 @@ def checker():
 def my_form_post_checker():
     text = str(flask.request.form['text'])
     #info = text.upper()
-    password = functions.checker_web(text)
-    return flask.render_template(f"checker.html", password=password)
+    passwordstrength = str(functions.regex(text))
+    print(passwordstrength)
+    return flask.render_template(f"checker.html", passwordstrength=passwordstrength)
 
 
 @app.route('/generator')
@@ -44,6 +45,13 @@ def my_form_post_gen1():
     if request.form['submit_button'] == 'Clear':
       return flask.render_template(f"generator.html")
   
+@app.route("/buttons")
+def buttons():
+  return flask.render_template("buttons.html")  
+
+@app.route("/404")
+def fourOfourpage():
+  return flask.render_template("404.html")  
 
   
 

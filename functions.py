@@ -72,12 +72,12 @@ def gen_simple():
 
 def gen_simple_web():
     characters = string.ascii_letters
-    password =  "".join(random.choice(characters) for x in range(random.randint(8, 26)))
+    password =  "".join(random.choice(characters) for x in range(random.randint(8, 12)))
     return password
 
 def gen_tough_web():
     characters = string.ascii_letters + string.punctuation  + string.digits
-    password =  "".join(random.choice(characters) for x in range(random.randint(8, 26)))
+    password =  "".join(random.choice(characters) for x in range(random.randint(8, 12)))
     return password
 
 def checker_web(password:str):
@@ -90,3 +90,40 @@ def checker_web(password:str):
     for suggest in suggestions:
       send = f"{send}" + suggest
   return send
+
+def regex(password:str):
+  score = 0
+  if len(password) >= 8 and len(password) <= 26:
+    score += 6
+    print("BETWEEM")
+
+  if bool(re.search("((?=.*[a-z]))", password)) == True:
+    score += 6
+    print("a-z")
+
+  if bool(re.search("((?=.*[A-Z]))", password)) == True:
+    score += 6
+    print("A-Z")
+
+  if bool(re.search("((?=.*[0-9]))", password)) == True:
+    score += 6
+    print("0-9")
+
+  if bool(re.search("((?=.*[!,$,%,^,&,*,(,),-,_,=,+]))", password)) == True:
+    score += 1
+    print("symbols")
+
+  for password in password:
+    if password.isdigit():
+      score += 1
+
+    if password.isupper():
+      score += 1
+
+    if password.islower():
+      score += 1
+
+  score = score * 2
+  score = str(score)
+
+  return score
